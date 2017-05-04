@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-import sys
-sys.path.append("/home/zgy/PycharmProjects/newweb/")
 from Ksana import Ksana, Response, Responsejson, Responsefile,Redirctresponse
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from lib import gzips, deflated
