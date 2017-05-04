@@ -83,7 +83,7 @@ httpksana.route.add(r"^/delete", post, methods=["DELETE"])
 
 
 def encodingutf8(request):
-    response = Responsefile("/home/zgy/PycharmProjects/newweb/httpksana/templates/UTF-8-demo.txt", {})
+    response = Responsefile("templates/UTF-8-demo.txt", {})
     return response
 
 
@@ -225,19 +225,19 @@ def stream(request,time):
 httpksana.route.add(r"^/stream/(?P<time>.*?)$",stream)
 
 def html(request):
-    response=Responsefile("/home/zgy/PycharmProjects/newweb/httpksana/templates/html.html",content_type="text/html")
+    response=Responsefile("templates/html.html",content_type="text/html")
     return response
 
 httpksana.route.add(r"^html$",html)
 
 def robot(request):
-    response=Responsefile("/home/zgy/PycharmProjects/newweb/httpksana/templates/robots.txt")
+    response=Responsefile("templates/robots.txt")
     return response
 
 httpksana.route.add(r"^robots.txt$",robot)
 
 def deny(request):
-    response=Responsefile("/home/zgy/PycharmProjects/newweb/httpksana/templates/deny.txt")
+    response=Responsefile("templates/deny.txt")
     return response
 
 httpksana.route.add(r"^deny$",deny)
@@ -245,43 +245,43 @@ httpksana.route.add(r"^deny$",deny)
 def links(request,all,index):
     template = env.get_template('Links.html')
     all=[str(i) for i in range(int(all))]
-    response = Response(template.render(all=all,index=index), {}, content_type="text/html; charset=utf-8")
+    response = Response(template.render(port=args.port,all=all,index=index), {}, content_type="text/html; charset=utf-8")
     return response
 
 httpksana.route.add(r"^links/(?P<all>.*)/(?P<index>.*)$",links)
 
 def imagejpg(request):
-    response = Responsefile("/home/zgy/PycharmProjects/newweb/httpksana/templates/image.jpg",content_type="image/jpg",encode=True)
+    response = Responsefile("templates/image.jpg",content_type="image/jpg",encode=True)
     return response
 
 httpksana.route.add(r"^image/jpg$",imagejpg)
 
 def imagepng(request):
-    response = Responsefile("/home/zgy/PycharmProjects/newweb/httpksana/templates/image.png", content_type="image/png",encode=True)
+    response = Responsefile("templates/image.png", content_type="image/png",encode=True)
     return response
 
 httpksana.route.add(r"^image/png$",imagepng)
 
 def imagejpeg(request):
-    response = Responsefile("/home/zgy/PycharmProjects/newweb/httpksana/templates/image.jpeg",content_type="image/jpeg",encode=True)
+    response = Responsefile("templates/image.jpeg",content_type="image/jpeg",encode=True)
     return response
 
 httpksana.route.add(r"^image/jpeg$",imagejpeg)
 
 def imagewebp(request):
-    response = Responsefile("/home/zgy/PycharmProjects/newweb/httpksana/templates/image.webp",content_type="image/webp",encode=True)
+    response = Responsefile("templates/image.webp",content_type="image/webp",encode=True)
     return response
 
 httpksana.route.add(r"^image/webp$",imagewebp)
 
 def imagesvg(request):
-    response = Responsefile("/home/zgy/PycharmProjects/newweb/httpksana/templates/image.svg",content_type="image/svg+xml",encode=True)
+    response = Responsefile("templates/image.svg",content_type="image/svg+xml",encode=True)
     return response
 
 httpksana.route.add(r"^image/svg$",imagesvg)
 
 def xml(request):
-    response=Responsefile("/home/zgy/PycharmProjects/newweb/httpksana/templates/xml.xml",content_type="application/xml")
+    response=Responsefile("templates/xml.xml",content_type="application/xml")
     return response
 
 httpksana.route.add(r"^xml$",xml)
