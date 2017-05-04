@@ -16,7 +16,7 @@
 <body>
 {% for row in all %}
 {% if row != index %}
-<a href={{"https://httpksana/links/%s/%s"|format(all|length,row)}}>{{row}}</a>
+<a href={{"https://httpksana.herokuapp.com/links/%s/%s"|format(all|length,row)}}>{{row}}</a>
 {% else %}
 {{row}}
 {% endif %}
