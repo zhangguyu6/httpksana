@@ -299,7 +299,7 @@ if __name__ == '__main__':
     parser.add_argument("port",type=int)
     args = parser.parse_args()
 
-    httpksana.run(("localhost", args.port))
+    httpksana.run(("0.0.0.0", args.port))
 
 
 
