@@ -1,0 +1,16 @@
+appdirs==1.4.3
+args==0.1.0
+Brotli==0.6.0
+clint==0.5.1
+httptools==0.0.9
+Jinja2==2.9.6
+ksana==0.0.2
+MarkupSafe==1.0
+packaging==16.8
+pkginfo==1.4.1
+pyparsing==2.2.0
+requests==2.13.0
+requests-toolbelt==0.7.1
+six==1.10.0
+twine==1.8.1
+ujson==1.35
