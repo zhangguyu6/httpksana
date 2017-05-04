@@ -1,1 +1,1 @@
-web: python3 httpksana.py
+web: python3 httpksana.py $PORT

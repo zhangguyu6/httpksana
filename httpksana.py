@@ -294,7 +294,12 @@ def form(request):
 httpksana.route.add(r"^form/post$",form)
 
 if __name__ == '__main__':
-    httpksana.run(("localhost", 8889))
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("port",type=int)
+    args = parser.parse_args()
+
+    httpksana.run(("localhost", args.port))
 
 
 
