@@ -18,6 +18,7 @@ httpksana = Ksana()
 def index(request):
     template = env.get_template('index.html')
     response = Response(template.render(), {}, content_type="text/html; charset=utf-8")
+    print(response.make_response())
     return response
 
 
