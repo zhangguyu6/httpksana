@@ -1,4 +1,4 @@
-# HTTParrot 
+# HTTKsana 
 
 HTTP server built on [Ksnan](https://github.com/zhangguyu6/ksana) to serve useful endpoints for testing purposes. Its goal is to be as close as possible to [HTTPBin](http://httpbin.org).
 
