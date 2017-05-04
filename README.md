@@ -21,7 +21,6 @@ HTTP server built on [Ksnan](https://github.com/zhangguyu6/ksana) to serve usefu
 * /response-headers?key=val  Returns given response headers.
 * /redirect/:n   302 Redirects *n* times.
 * /redirect-to?url=foo  302 Redirects to the foo URL.
-* /relative-redirect/:n  302 Relative redirects  n  times.
 * /cookies  Returns cookie data. 
 * /cookies/set?name=value Sets one or more simple cookies. 
 * /cookies/delete?name1=&name2= Deletes one or more simple cookies.

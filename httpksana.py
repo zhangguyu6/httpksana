@@ -18,7 +18,6 @@ httpksana = Ksana()
 def index(request):
     template = env.get_template('index.html')
     response = Response(template.render(), {}, content_type="text/html; charset=utf-8")
-    print(response.make_response())
     return response
 
 
@@ -246,7 +245,7 @@ httpksana.route.add(r"^deny$",deny)
 def links(request,all,index):
     template = env.get_template('Links.html')
     all=[str(i) for i in range(int(all))]
-    response = Response(template.render(port=args.port,all=all,index=index), {}, content_type="text/html; charset=utf-8")
+    response = Response(template.render(all=all,index=index), {}, content_type="text/html; charset=utf-8")
     return response
 
 httpksana.route.add(r"^links/(?P<all>.*)/(?P<index>.*)$",links)
